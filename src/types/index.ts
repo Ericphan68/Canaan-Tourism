@@ -46,6 +46,53 @@ export interface Tour {
   action: ActionType;
   highlights: string[];
   summary: string;
+  /** Giá trẻ em (nếu áp dụng, dùng cho tour tại điểm đến). */
+  childPrice?: Price;
+  /** Ngôn ngữ phục vụ (tour tại điểm đến). */
+  languages?: string[];
+  /** Có đón tại khách sạn không (tour tại điểm đến). */
+  hotelPickup?: boolean;
+  /** Điểm tập trung / giờ bắt đầu (tour tại điểm đến). */
+  meetingPoint?: string;
+  startTime?: string;
+  /** Nội dung chi tiết — chỉ có ở một số tour tiêu biểu. */
+  detail?: TourDetail;
+}
+
+export interface TourDetail {
+  gallery: string[];
+  videoUrl?: string;
+  itinerary: ItineraryDay[];
+  hotels: string;
+  meals: string;
+  transport: string;
+  visa: string;
+  includes: string[];
+  excludes: string[];
+  childPolicy: string;
+  cancellationPolicy: string;
+  faqs: FaqItem[];
+  reviews: TourReview[];
+}
+
+export interface ItineraryDay {
+  day: number;
+  title: string;
+  description: string;
+  meals?: string;
+}
+
+export interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+export interface TourReview {
+  name: string;
+  location: string;
+  rating: number;
+  date: string;
+  quote: string;
 }
 
 export interface FlightOffer {

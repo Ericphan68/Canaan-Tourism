@@ -81,6 +81,11 @@ export const tours: Tour[] = [
     highlights: ['Lướt cồn cát 4x4', 'Cưỡi lạc đà', 'Tiệc BBQ & múa Tanoura', 'Đón tại khách sạn'],
     summary:
       'Trải nghiệm sa mạc kinh điển, có xe đón tận khách sạn tại Dubai. Đặt trực tuyến, xác nhận ngay.',
+    childPrice: { from: 40, currency: 'USD', unit: '/trẻ em' },
+    languages: ['Tiếng Việt', 'English'],
+    hotelPickup: true,
+    meetingPoint: 'Đón tại khách sạn trong nội thành Dubai',
+    startTime: '15:00',
   },
   {
     slug: 'santorini-athens-8n7d',
@@ -141,6 +146,11 @@ export const tours: Tour[] = [
     highlights: ['Dubai Frame', 'Khu phố cổ Al Fahidi', 'Palm Jumeirah', 'Dubai Mall & nhạc nước'],
     summary:
       'Xe riêng đón tại khách sạn, linh hoạt điểm dừng theo nhu cầu. Phù hợp gia đình và nhóm bạn tự bay đến Dubai.',
+    childPrice: { from: 0, currency: 'USD', unit: 'trẻ dưới 4 tuổi miễn phí' },
+    languages: ['Tiếng Việt', 'English'],
+    hotelPickup: true,
+    meetingPoint: 'Đón tại sảnh khách sạn của bạn',
+    startTime: '09:00',
   },
   {
     slug: 'ai-cap-israel-jordan-lien-tuyen',
@@ -182,7 +192,116 @@ export const tours: Tour[] = [
     summary:
       'Lựa chọn khởi động dễ chịu cho gia đình, giá tốt, lịch khởi hành dày và hướng dẫn viên tận tâm.',
   },
+  {
+    slug: 'abu-dhabi-trong-ngay-tu-dubai',
+    title: 'Abu Dhabi trọn ngày (khởi hành từ Dubai)',
+    destination: 'Dubai & UAE',
+    region: 'Trung Đông',
+    image: img(photo.abuDhabi),
+    durationDays: 1,
+    durationNights: 0,
+    departureFrom: ['Tại Dubai'],
+    nextDepartures: ['Hằng ngày'],
+    price: { from: 95, currency: 'USD', unit: '/người lớn' },
+    seatsLeft: 18,
+    format: 'join',
+    segment: 'standard',
+    mode: 'at-destination',
+    action: 'book',
+    highlights: ['Sheikh Zayed Grand Mosque', 'Qasr Al Watan', 'Louvre Abu Dhabi', 'Etihad Towers'],
+    summary: 'Tour ghép trong ngày tới thủ đô UAE, đón tại khách sạn Dubai, có hướng dẫn viên.',
+    childPrice: { from: 70, currency: 'USD', unit: '/trẻ em' },
+    languages: ['English', 'Tiếng Việt (theo yêu cầu)'],
+    hotelPickup: true,
+    meetingPoint: 'Đón tại khách sạn nội thành Dubai',
+    startTime: '08:00',
+  },
+  {
+    slug: 'jerusalem-city-tour-nua-ngay',
+    title: 'Jerusalem Old City — tour đi bộ nửa ngày',
+    destination: 'Israel & Jordan',
+    region: 'Trung Đông',
+    image: img(photo.jerusalem),
+    durationDays: 1,
+    durationNights: 0,
+    departureFrom: ['Tại Jerusalem'],
+    nextDepartures: ['Thứ 2 · 4 · 6'],
+    price: { from: 60, currency: 'USD', unit: '/người lớn' },
+    seatsLeft: 12,
+    format: 'join',
+    segment: 'standard',
+    mode: 'at-destination',
+    action: 'book',
+    highlights: ['Con đường Thương khó', 'Bức tường phía Tây', 'Nhà thờ Mộ Thánh', 'Núi Ô-liu'],
+    summary: 'Ghép đoàn khám phá bốn khu phố cổ Jerusalem cùng hướng dẫn viên am hiểu lịch sử.',
+    childPrice: { from: 40, currency: 'USD', unit: '/trẻ em' },
+    languages: ['English'],
+    hotelPickup: false,
+    meetingPoint: 'Cổng Jaffa, Thành cổ Jerusalem',
+    startTime: '09:00',
+  },
+  {
+    slug: 'cappadocia-2-ngay-tai-diem-den',
+    title: 'Cappadocia 2 ngày (không gồm vé quốc tế)',
+    destination: 'Thổ Nhĩ Kỳ',
+    region: 'Trung Đông',
+    image: img(photo.cappadocia),
+    durationDays: 2,
+    durationNights: 1,
+    departureFrom: ['Tại Thổ Nhĩ Kỳ'],
+    nextDepartures: ['Hằng ngày'],
+    price: { from: 240, currency: 'USD', unit: '/người lớn' },
+    seatsLeft: 10,
+    format: 'join',
+    segment: 'premium',
+    mode: 'at-destination',
+    action: 'quote',
+    highlights: ['Khinh khí cầu bình minh', 'Thung lũng Goreme', 'Thành phố ngầm', 'Khách sạn hang đá'],
+    summary: 'Gói 2 ngày tại điểm đến cho khách tự bay tới Thổ Nhĩ Kỳ, có thể thêm khinh khí cầu.',
+    childPrice: { from: 160, currency: 'USD', unit: '/trẻ em' },
+    languages: ['English'],
+    hotelPickup: true,
+    meetingPoint: 'Đón tại khách sạn khu Cappadocia',
+    startTime: '08:30',
+  },
 ];
 
 export const featuredFromVietnam = tours.filter((t) => t.mode === 'from-vietnam').slice(0, 4);
 export const featuredAtDestination = tours.filter((t) => t.mode === 'at-destination');
+
+export function getTourBySlug(slug: string): Tour | undefined {
+  return tours.find((t) => t.slug === slug);
+}
+
+/** Tour liên quan: cùng điểm đến, khác slug; bù thêm nếu chưa đủ. */
+export function relatedTours(tour: Tour, limit = 3): Tour[] {
+  const sameDest = tours.filter((t) => t.slug !== tour.slug && t.destination === tour.destination);
+  const rest = tours.filter((t) => t.slug !== tour.slug && t.destination !== tour.destination);
+  return [...sameDest, ...rest].slice(0, limit);
+}
+
+/** Nhãn hiển thị cho phân khúc & loại tour — dùng chung ở filter và card. */
+export const segmentLabels: Record<Tour['segment'], string> = {
+  saver: 'Tiết kiệm',
+  standard: 'Tiêu chuẩn',
+  premium: 'Premium',
+  luxury: 'Luxury',
+  private: 'Private',
+};
+
+export const formatLabels: Record<Tour['format'], string> = {
+  join: 'Tour ghép',
+  'private-group': 'Tour đoàn riêng',
+  individual: 'Tour cá nhân',
+  family: 'Tour gia đình',
+  corporate: 'Tour doanh nghiệp',
+  church: 'Tour hội thánh',
+  school: 'Tour trường học',
+  bespoke: 'Thiết kế riêng',
+};
+
+/** Danh sách giá trị lọc, suy ra trực tiếp từ dữ liệu (không hardcode rời rạc). */
+export const tourDestinations = Array.from(new Set(tours.map((t) => t.destination)));
+export const tourDepartureCities = Array.from(
+  new Set(tours.flatMap((t) => t.departureFrom)),
+).filter((c) => !c.startsWith('Tại'));

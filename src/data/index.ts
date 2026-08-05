@@ -2,6 +2,7 @@ export * from './images';
 export * from './departures';
 export * from './destinations';
 export * from './tours';
+export * from './tour-details';
 export * from './hotels';
 export * from './flights';
 export * from './dubai';
