@@ -104,6 +104,19 @@ export interface FlightOffer {
   duration: string;
   stops: string;
   partnerUrl: string;
+  airline?: string;
+  departTime?: string;
+  arriveTime?: string;
+}
+
+export interface SampleFlight {
+  id: string;
+  fromCity: string;
+  fromCode: string;
+  toCity: string;
+  toCode: string;
+  cabin: string;
+  offers: FlightOffer[];
 }
 
 export interface Hotel {
@@ -179,6 +192,18 @@ export interface VisaCountry {
   stayDuration: string;
   popular: boolean;
   summary: string;
+  detail?: VisaDetail;
+}
+
+export interface VisaDetail {
+  whoCanApply: string;
+  eligibility: string[];
+  validity: string;
+  entries: string;
+  documents: string[];
+  process: string[];
+  notes: string[];
+  faqs: FaqItem[];
 }
 
 export interface EventType {

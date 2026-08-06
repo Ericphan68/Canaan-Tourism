@@ -10,6 +10,7 @@ export * from './holyland';
 export * from './holyland-details';
 export * from './dubai-details';
 export * from './visas';
+export * from './visa-details';
 export * from './events';
 export * from './articles';
 export * from './reviews';

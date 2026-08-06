@@ -1,9 +1,13 @@
 'use client';
 
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
-import { sortOptions } from '@/lib/tour-filter';
+import { sortOptions as tourSortOptions } from '@/lib/tour-filter';
 
-export function SortSelect() {
+export function SortSelect({
+  options = tourSortOptions,
+}: {
+  options?: { value: string; label: string }[];
+}) {
   const router = useRouter();
   const pathname = usePathname();
   const params = useSearchParams();
@@ -25,7 +29,7 @@ export function SortSelect() {
         onChange={(e) => onChange(e.target.value)}
         className="h-10 rounded-full border border-mist bg-ivory-100 px-4 text-sm font-medium text-midnight outline-none focus:border-royal"
       >
-        {sortOptions.map((opt) => (
+        {options.map((opt) => (
           <option key={opt.value} value={opt.value}>
             {opt.label}
           </option>

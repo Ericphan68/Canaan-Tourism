@@ -33,6 +33,9 @@ export const IconArrowUpRight = (p: IconProps) => (
 export const IconSearch = (p: IconProps) => (
   <svg {...base(p)}><circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5" /></svg>
 );
+export const IconLuggage = (p: IconProps) => (
+  <svg {...base(p)}><rect x="6" y="7" width="12" height="13" rx="2" /><path d="M9 7V4h6v3M10 11v5M14 11v5" /></svg>
+);
 export const IconPhone = (p: IconProps) => (
   <svg {...base(p)}><path d="M4 4h4l2 5-2.5 1.5a11 11 0 0 0 6 6L15 14l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 2 6a2 2 0 0 1 2-2Z" /></svg>
 );
