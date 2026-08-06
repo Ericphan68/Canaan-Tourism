@@ -13,6 +13,7 @@ export * from './visas';
 export * from './visa-details';
 export * from './events';
 export * from './articles';
+export * from './article-details';
 export * from './reviews';
 export * from './services';
 export * from './signature';

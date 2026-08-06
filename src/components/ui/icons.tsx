@@ -72,6 +72,9 @@ export const IconCalendar = (p: IconProps) => (
 export const IconUsers = (p: IconProps) => (
   <svg {...base(p)}><circle cx="9" cy="8" r="3" /><path d="M3.5 20a5.5 5.5 0 0 1 11 0" /><path d="M16 6a3 3 0 0 1 0 6M17 20a5.5 5.5 0 0 0-3-4.9" /></svg>
 );
+export const IconUser = (p: IconProps) => (
+  <svg {...base(p)}><circle cx="12" cy="8" r="3.5" /><path d="M5.5 20a6.5 6.5 0 0 1 13 0" /></svg>
+);
 export const IconCheck = (p: IconProps) => (
   <svg {...base(p)}><path d="m5 12 4.5 4.5L19 7" /></svg>
 );
