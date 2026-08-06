@@ -149,6 +149,24 @@ export interface HolyLandJourney {
   nextDepartures: string[];
   summary: string;
   stops: { place: string; meaning: string }[];
+  detail?: HolyLandDetail;
+}
+
+export interface HolyLandDetail {
+  gallery: string[];
+  historicalContext: string;
+  spiritualTheme: string;
+  itinerary: ItineraryDay[];
+  includes: string[];
+  faqs: FaqItem[];
+}
+
+export interface DubaiDetail {
+  gallery: string[];
+  highlights: string[];
+  includes: string[];
+  excludes: string[];
+  faqs: FaqItem[];
 }
 
 export interface VisaCountry {
