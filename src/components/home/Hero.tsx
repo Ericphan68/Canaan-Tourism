@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { img, photo } from '@/data/images';
 import { Button } from '@/components/ui/Button';
 import { SearchConsole } from './SearchConsole';
 import { IconArrowRight } from '@/components/ui/icons';
@@ -13,40 +12,21 @@ const quickLinks = [
 export function Hero() {
   return (
     <section className="relative isolate overflow-hidden bg-midnight text-white">
-      {/* Ảnh nền cinematic */}
+      {/* Ảnh nền — thành phố thiên đường (thiết kế riêng) */}
       <div className="absolute inset-0 -z-10">
         <Image
-          src={img(photo.dubaiSkyline, 2000, 75)}
-          alt="Toàn cảnh Dubai lúc hoàng hôn"
+          src="/hero.webp"
+          alt="Thành phố thiên đường — hành trình đức tin cùng Canaan Tourism"
           fill
           priority
           sizes="100vw"
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-midnight via-midnight/80 to-midnight/30" />
-        <div className="absolute inset-0 bg-gradient-to-t from-midnight via-transparent to-midnight/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-midnight/85 via-midnight/45 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-midnight/55 via-transparent to-transparent" />
       </div>
 
-      {/* Route Line — đường bay champagne vẽ ngang hero */}
-      <svg
-        className="pointer-events-none absolute inset-x-0 top-1/3 -z-0 h-40 w-full opacity-70"
-        viewBox="0 0 1200 200"
-        fill="none"
-        preserveAspectRatio="none"
-        aria-hidden
-      >
-        <path
-          d="M-20 150 C 300 40, 600 40, 1220 120"
-          stroke="#C6A15B"
-          strokeWidth="1.5"
-          strokeDasharray="2 6"
-          strokeLinecap="round"
-        />
-        <circle cx="140" cy="96" r="4" fill="#C6A15B" />
-        <circle cx="1040" cy="86" r="4" fill="#C6A15B" />
-      </svg>
-
-      <div className="shell relative flex flex-col justify-center pb-6 pt-16 sm:pt-20 lg:min-h-[38rem] lg:pt-24">
+      <div className="shell relative flex flex-col justify-center pb-6 pt-16 sm:pt-20 lg:min-h-[40rem] lg:pt-24">
         <div className="max-w-2xl">
           <span className="eyebrow text-champagne-400">
             <span className="route-dot" />

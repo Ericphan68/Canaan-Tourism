@@ -19,7 +19,7 @@ export function FlightsTeaser() {
 
       <div className="mt-10 grid gap-6 lg:grid-cols-[1fr_1.3fr]">
         {/* Bảng so sánh 3 đối tác */}
-        <div className="rounded-2xl bg-ivory-100 p-5 shadow-card ring-1 ring-midnight/5">
+        <div className="rounded-2xl bg-ivory-100 p-5 shadow-card ring-1 ring-mist">
           <div className="flex items-center justify-between border-b border-mist pb-3 text-sm">
             <span className="inline-flex items-center gap-2 font-medium text-midnight">
               <IconPlane className="h-4 w-4 text-royal" /> SGN → DXB · 12/09

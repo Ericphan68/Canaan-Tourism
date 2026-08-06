@@ -2,15 +2,19 @@ import Link from 'next/link';
 import type { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from 'react';
 import { cn } from '@/lib/utils';
 
-type Variant = 'primary' | 'gold' | 'outline' | 'ghost' | 'onDark';
+type Variant = 'primary' | 'gold' | 'navy' | 'outline' | 'ghost' | 'onDark';
 type Size = 'sm' | 'md' | 'lg';
 
 const variants: Record<Variant, string> = {
-  primary: 'bg-royal text-white hover:bg-royal-600 shadow-sm hover:shadow-md',
-  gold: 'bg-champagne text-midnight hover:bg-champagne-400 shadow-sm hover:shadow-md',
-  outline: 'border border-midnight/20 text-midnight hover:border-midnight/50 hover:bg-midnight/[0.03]',
+  // Nút chính: nền Royal Gold, chữ trắng.
+  primary: 'bg-champagne text-white hover:bg-champagne-600 shadow-sm hover:shadow-md',
+  gold: 'bg-champagne text-white hover:bg-champagne-600 shadow-sm hover:shadow-md',
+  // Nút phụ: nền navy, chữ trắng.
+  navy: 'bg-midnight text-white hover:bg-midnight-800 shadow-sm hover:shadow-md',
+  // Nút outline: viền navy, nền trong suốt.
+  outline: 'border border-midnight/25 text-midnight hover:border-champagne hover:text-champagne-600 hover:bg-champagne/[0.05]',
   ghost: 'text-midnight hover:bg-midnight/[0.05]',
-  onDark: 'border border-white/25 text-white hover:bg-white/10 hover:border-white/45',
+  onDark: 'border border-white/30 text-white hover:bg-white/10 hover:border-champagne-400 hover:text-champagne-400',
 };
 
 const sizes: Record<Size, string> = {

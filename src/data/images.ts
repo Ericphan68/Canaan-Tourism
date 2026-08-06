@@ -23,6 +23,8 @@ export const photo = {
   airplaneWindow: 'photo-1540339832862-474599807836',
   businessClass: 'photo-1592985684811-6c0f98adb014',
   jerusalem: 'photo-1529079875474-0a66a1f176d0',
+  // Hero trang chủ: Rome & Thánh đường Thánh Phêrô (Vatican) nhìn từ cầu Sant'Angelo lúc hoàng hôn.
+  heroImage: 'photo-1765985268464-fa7de90ac2c1',
   holyland: 'photo-1529079688486-feaa9f516c9a',
   petra: 'photo-1579606032821-4e6161c81bd3',
   egypt: 'photo-1539768942893-daf53e448371',

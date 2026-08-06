@@ -29,15 +29,15 @@ export function RouteMap({ stops }: { stops: Stop[] }) {
     <div className="overflow-x-auto rounded-2xl bg-midnight p-4 sm:p-6">
       <svg viewBox={`0 0 ${width} ${height}`} className="h-auto w-full min-w-[36rem]" role="img" aria-label="Bản đồ tuyến hành trình">
         {/* đường nét đứt champagne */}
-        <path d={path} fill="none" stroke="#C6A15B" strokeWidth={2} strokeDasharray="2 7" strokeLinecap="round" opacity={0.85} />
+        <path d={path} fill="none" stroke="#B88A3B" strokeWidth={2} strokeDasharray="2 7" strokeLinecap="round" opacity={0.85} />
         {points.map((p, i) => (
           <g key={p.place}>
-            <circle cx={p.x} cy={p.y} r={7} fill="#0A1E3C" stroke="#C6A15B" strokeWidth={2} />
-            <circle cx={p.x} cy={p.y} r={2.5} fill="#C6A15B" />
-            <text x={p.x} y={p.y - 18} textAnchor="middle" fill="#FAF7F0" fontSize={16} fontWeight={600}>
+            <circle cx={p.x} cy={p.y} r={7} fill="#364A63" stroke="#B88A3B" strokeWidth={2} />
+            <circle cx={p.x} cy={p.y} r={2.5} fill="#B88A3B" />
+            <text x={p.x} y={p.y - 18} textAnchor="middle" fill="#F7EEDC" fontSize={16} fontWeight={600}>
               {p.place}
             </text>
-            <text x={p.x} y={p.y + 30} textAnchor="middle" fill="#C6A15B" fontSize={11}>
+            <text x={p.x} y={p.y + 30} textAnchor="middle" fill="#B88A3B" fontSize={11}>
               {String(i + 1).padStart(2, '0')}
             </text>
           </g>

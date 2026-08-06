@@ -14,7 +14,7 @@ export function VisaWizard() {
   const [dest, setDest] = useState('');
 
   return (
-    <div className="rounded-2xl bg-ivory-100 p-5 shadow-console ring-1 ring-midnight/5 sm:p-6">
+    <div className="rounded-2xl bg-ivory-100 p-5 shadow-console ring-1 ring-mist sm:p-6">
       <p className="flex items-center gap-2 font-display text-lg font-medium text-midnight">
         <IconPassport className="h-5 w-5 text-royal" /> Bạn muốn xin visa đi đâu?
       </p>

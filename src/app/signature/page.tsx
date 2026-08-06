@@ -25,7 +25,7 @@ export default function SignaturePage() {
         </div>
 
         <svg className="pointer-events-none absolute inset-x-0 top-1/2 -z-0 h-24 w-full opacity-60" viewBox="0 0 1200 100" fill="none" preserveAspectRatio="none" aria-hidden>
-          <path d="M-20 60 C 320 20, 720 20, 1220 50" stroke="#C6A15B" strokeWidth="1.5" strokeDasharray="2 7" />
+          <path d="M-20 60 C 320 20, 720 20, 1220 50" stroke="#B88A3B" strokeWidth="1.5" strokeDasharray="2 7" />
         </svg>
 
         <div className="shell py-10 sm:py-16">
@@ -119,7 +119,7 @@ export default function SignaturePage() {
             </ul>
           </div>
 
-          <div className="rounded-3xl bg-ivory-100 p-8 shadow-card ring-1 ring-midnight/5">
+          <div className="rounded-3xl bg-ivory-100 p-8 shadow-card ring-1 ring-mist">
             <h3 className="font-display text-2xl font-medium text-midnight">Bắt đầu hành trình riêng</h3>
             <p className="mt-2 text-sm text-ink-muted">
               Chia sẻ mong muốn của bạn, chuyên viên Signature sẽ liên hệ trong vòng 24 giờ với đề xuất

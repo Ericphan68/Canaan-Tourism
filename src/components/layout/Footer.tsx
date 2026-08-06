@@ -19,7 +19,7 @@ const socials = [
 
 export function Footer() {
   return (
-    <footer className="bg-midnight text-white/70">
+    <footer className="bg-midnight-950 text-white/70">
       {/* Dải cam kết */}
       <div className="border-b border-white/10">
         <div className="shell grid gap-6 py-10 sm:grid-cols-2 lg:grid-cols-4">

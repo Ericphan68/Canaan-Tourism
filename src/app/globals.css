@@ -83,7 +83,7 @@
   .route-dot::after {
     content: '';
     @apply absolute inset-0 rounded-full;
-    box-shadow: 0 0 0 4px rgba(198, 161, 91, 0.18);
+    box-shadow: 0 0 0 4px rgba(184, 138, 59, 0.18);
   }
 
   .link-underline {

@@ -7,7 +7,7 @@ import { IconClock } from '@/components/ui/icons';
 
 export function ArticleCard({ article }: { article: Article }) {
   return (
-    <article className="group flex h-full flex-col overflow-hidden rounded-2xl bg-ivory-100 shadow-card ring-1 ring-midnight/5 transition-all duration-500 ease-canaan hover:-translate-y-1 hover:shadow-card-hover">
+    <article className="group flex h-full flex-col overflow-hidden rounded-2xl bg-ivory-100 shadow-card ring-1 ring-mist transition-all duration-500 ease-canaan hover:-translate-y-1 hover:shadow-card-hover">
       <Link href={`/cam-nang/${article.slug}`} className="relative block aspect-[16/10] overflow-hidden">
         <Image
           src={article.image}

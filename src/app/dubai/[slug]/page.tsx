@@ -144,7 +144,7 @@ export default async function DubaiDetailPage({
 
         {/* Booking sidebar */}
         <div className="lg:sticky lg:top-24 lg:h-fit">
-          <div className="rounded-2xl bg-ivory-100 p-5 shadow-card ring-1 ring-midnight/5">
+          <div className="rounded-2xl bg-ivory-100 p-5 shadow-card ring-1 ring-mist">
             <div className="flex items-end justify-between">
               <div>
                 <span className="text-xs text-ink-soft">Giá từ</span>

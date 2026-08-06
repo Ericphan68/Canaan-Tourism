@@ -146,7 +146,7 @@ export default async function VisaCountryPage({
 
         {/* Sidebar CTA */}
         <div className="lg:sticky lg:top-24 lg:h-fit">
-          <div className="rounded-2xl bg-ivory-100 p-5 shadow-card ring-1 ring-midnight/5">
+          <div className="rounded-2xl bg-ivory-100 p-5 shadow-card ring-1 ring-mist">
             <p className="inline-flex items-center gap-1.5 text-xs font-semibold text-champagne-600">
               <IconClock className="h-3.5 w-3.5" /> Xử lý: {visa.processingTime}
             </p>

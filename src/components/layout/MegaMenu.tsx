@@ -15,7 +15,7 @@ export function MegaMenu({
 
   return (
     <div className="absolute left-1/2 top-full z-40 w-[min(60rem,90vw)] -translate-x-1/2 pt-3">
-      <div className="animate-fade-up overflow-hidden rounded-2xl bg-ivory-100 shadow-console ring-1 ring-midnight/5">
+      <div className="animate-fade-up overflow-hidden rounded-2xl bg-ivory-100 shadow-console ring-1 ring-mist">
         <div className="grid grid-cols-1 gap-6 p-6 md:grid-cols-[1fr_1fr_0.9fr]">
           {item.megaMenu.map((group) => (
             <div key={group.heading}>

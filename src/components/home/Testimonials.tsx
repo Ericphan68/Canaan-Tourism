@@ -17,7 +17,7 @@ export function Testimonials() {
         {reviews.slice(0, 3).map((review) => (
           <figure
             key={review.name}
-            className="flex h-full flex-col rounded-2xl bg-ivory-100 p-6 shadow-card ring-1 ring-midnight/5"
+            className="flex h-full flex-col rounded-2xl bg-ivory-100 p-6 shadow-card ring-1 ring-mist"
           >
             <IconQuote className="h-8 w-8 text-champagne" />
             <blockquote className="mt-3 flex-1 text-pretty text-sm leading-relaxed text-ink">

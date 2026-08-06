@@ -42,19 +42,19 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50">
       {/* Thanh tiện ích */}
-      <div className="hidden bg-midnight-950 text-white/70 xl:block">
+      <div className="hidden border-b border-mist bg-ivory-200 text-ink-muted xl:block">
         <div className="shell flex h-9 items-center justify-between text-xs">
           <div className="flex items-center gap-5">
-            <a href={`tel:${siteConfig.contact.hotline}`} className="inline-flex items-center gap-1.5 hover:text-champagne-400">
+            <a href={`tel:${siteConfig.contact.hotline}`} className="inline-flex items-center gap-1.5 hover:text-champagne-600">
               <IconPhone className="h-3.5 w-3.5" /> {siteConfig.contact.hotline}
             </a>
-            <a href={`mailto:${siteConfig.contact.email}`} className="hover:text-champagne-400">
+            <a href={`mailto:${siteConfig.contact.email}`} className="hover:text-champagne-600">
               {siteConfig.contact.email}
             </a>
           </div>
           <div className="flex items-center gap-5">
             <span>Văn phòng: TP.HCM · Dubai</span>
-            <Link href="/yeu-cau-bao-gia" className="inline-flex items-center gap-1 text-champagne-400 hover:text-champagne-200">
+            <Link href="/yeu-cau-bao-gia" className="inline-flex items-center gap-1 font-semibold text-champagne-600 hover:text-midnight">
               Yêu cầu báo giá <IconArrowUpRight className="h-3 w-3" />
             </Link>
           </div>
@@ -66,13 +66,13 @@ export function Header() {
         className={cn(
           'border-b transition-colors duration-300 ease-canaan',
           scrolled
-            ? 'border-midnight-700/60 bg-midnight/95 backdrop-blur-md'
-            : 'border-transparent bg-midnight',
+            ? 'border-mist bg-ivory/90 backdrop-blur-md'
+            : 'border-mist/60 bg-ivory',
         )}
         onMouseLeave={() => setOpenMenu(null)}
       >
         <div className="shell flex h-16 items-center justify-between gap-4 lg:h-[4.5rem]">
-          <Logo tone="light" />
+          <Logo tone="dark" />
 
           <nav className="hidden items-center xl:flex" aria-label="Điều hướng chính">
             {mainNav.map((item) => {
@@ -89,8 +89,8 @@ export function Header() {
                     className={cn(
                       'inline-flex items-center gap-1 whitespace-nowrap rounded-full px-3 py-2 text-sm font-medium transition-colors',
                       isActive(item)
-                        ? 'text-champagne-400'
-                        : 'text-white/85 hover:text-white',
+                        ? 'text-champagne-600'
+                        : 'text-midnight/80 hover:text-champagne-600',
                     )}
                   >
                     {item.label}
@@ -112,16 +112,16 @@ export function Header() {
           </nav>
 
           <div className="flex items-center gap-2">
-            <Button href="/tim-kiem" variant="onDark" size="sm" className="hidden 2xl:inline-flex">
+            <Button href="/tim-kiem" variant="outline" size="sm" className="hidden 2xl:inline-flex">
               Tìm chuyến đi
             </Button>
-            <Button href="/yeu-cau-bao-gia" variant="gold" size="sm" className="hidden sm:inline-flex">
+            <Button href="/yeu-cau-bao-gia" variant="primary" size="sm" className="hidden sm:inline-flex">
               Nhận tư vấn
             </Button>
             <button
               type="button"
               onClick={() => setMobileOpen(true)}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full text-white hover:bg-white/10 xl:hidden"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full text-midnight hover:bg-midnight/[0.06] xl:hidden"
               aria-label="Mở menu"
             >
               <IconMenu className="h-6 w-6" />

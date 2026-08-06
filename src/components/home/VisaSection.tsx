@@ -26,7 +26,7 @@ export function VisaSection() {
             <Link
               key={visa.slug}
               href={`/visa/${visa.slug}`}
-              className="group flex flex-col rounded-xl bg-ivory-100 p-4 shadow-card ring-1 ring-midnight/5 transition-all hover:-translate-y-0.5 hover:shadow-card-hover"
+              className="group flex flex-col rounded-xl bg-ivory-100 p-4 shadow-card ring-1 ring-mist transition-all hover:-translate-y-0.5 hover:shadow-card-hover"
             >
               <span className="text-2xl" aria-hidden>{visa.flag}</span>
               <span className="mt-2 text-sm font-semibold text-midnight group-hover:text-royal">

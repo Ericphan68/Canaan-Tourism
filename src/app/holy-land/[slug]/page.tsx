@@ -134,7 +134,7 @@ export default async function HolyLandDetailPage({
 
         {/* Sidebar đăng ký */}
         <div className="lg:sticky lg:top-24 lg:h-fit">
-          <div className="rounded-2xl bg-ivory-100 p-5 shadow-card ring-1 ring-midnight/5">
+          <div className="rounded-2xl bg-ivory-100 p-5 shadow-card ring-1 ring-mist">
             <span className="text-xs text-ink-soft">Giá tham khảo từ</span>
             <p className="font-display text-2xl font-semibold text-midnight">{formatPrice(journey.price)}</p>
             <span className="text-xs text-ink-soft">{journey.price.unit}</span>

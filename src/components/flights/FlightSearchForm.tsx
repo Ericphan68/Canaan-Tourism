@@ -47,7 +47,7 @@ export function FlightSearchForm() {
   const [trip, setTrip] = useState<Trip>('round');
 
   return (
-    <div className="rounded-2xl bg-ivory-100 p-4 shadow-console ring-1 ring-midnight/5 sm:p-5">
+    <div className="rounded-2xl bg-ivory-100 p-4 shadow-console ring-1 ring-mist sm:p-5">
       <div className="mb-3 flex flex-wrap gap-2">
         {trips.map((t) => (
           <button

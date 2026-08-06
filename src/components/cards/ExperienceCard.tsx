@@ -8,7 +8,7 @@ import { IconClock } from '@/components/ui/icons';
 
 export function ExperienceCard({ item }: { item: DubaiExperience }) {
   return (
-    <article className="group flex h-full flex-col overflow-hidden rounded-2xl bg-ivory-100 shadow-card ring-1 ring-midnight/5 transition-all duration-500 ease-canaan hover:-translate-y-1 hover:shadow-card-hover">
+    <article className="group flex h-full flex-col overflow-hidden rounded-2xl bg-ivory-100 shadow-card ring-1 ring-mist transition-all duration-500 ease-canaan hover:-translate-y-1 hover:shadow-card-hover">
       <Link href={`/dubai/${item.slug}`} className="relative block aspect-[3/2] overflow-hidden">
         <Image
           src={item.image}

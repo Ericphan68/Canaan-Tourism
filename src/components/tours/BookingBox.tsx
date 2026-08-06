@@ -19,7 +19,7 @@ export function BookingBox({ tour }: { tour: Tour }) {
   const waMessage = `Xin chào Canaan Tourism, tôi quan tâm tour "${tour.title}" — ngày ${dateLabel}, ${adults} người lớn${children ? ` và ${children} trẻ em` : ''}. Nhờ tư vấn và báo giá giúp.`;
 
   return (
-    <div className="rounded-2xl bg-ivory-100 p-5 shadow-card ring-1 ring-midnight/5">
+    <div className="rounded-2xl bg-ivory-100 p-5 shadow-card ring-1 ring-mist">
       <div className="flex items-end justify-between">
         <div>
           <span className="text-xs text-ink-soft">Giá tham khảo từ</span>

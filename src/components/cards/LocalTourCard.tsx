@@ -10,7 +10,7 @@ import { IconClock, IconMapPin, IconUsers, IconCheck, IconWhatsapp } from '@/com
 /** Card cho tour tại điểm đến: nêu rõ điểm tập trung, đón khách sạn, giá NL/TE. */
 export function LocalTourCard({ tour }: { tour: Tour }) {
   return (
-    <article className="group flex flex-col overflow-hidden rounded-2xl bg-ivory-100 shadow-card ring-1 ring-midnight/5 transition-all duration-500 ease-canaan hover:-translate-y-1 hover:shadow-card-hover sm:flex-row">
+    <article className="group flex flex-col overflow-hidden rounded-2xl bg-ivory-100 shadow-card ring-1 ring-mist transition-all duration-500 ease-canaan hover:-translate-y-1 hover:shadow-card-hover sm:flex-row">
       <Link href={`/du-lich/${tour.slug}`} className="relative block aspect-[16/10] shrink-0 overflow-hidden sm:aspect-auto sm:w-64">
         <Image
           src={tour.image}

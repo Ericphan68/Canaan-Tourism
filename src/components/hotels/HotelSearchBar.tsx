@@ -28,7 +28,7 @@ function Field({
 export function HotelSearchBar() {
   return (
     <form
-      className="flex flex-col gap-2 rounded-2xl bg-ivory-100 p-4 shadow-console ring-1 ring-midnight/5 lg:flex-row lg:items-stretch"
+      className="flex flex-col gap-2 rounded-2xl bg-ivory-100 p-4 shadow-console ring-1 ring-mist lg:flex-row lg:items-stretch"
       onSubmit={(e) => {
         e.preventDefault();
         document.getElementById('danh-sach')?.scrollIntoView({ behavior: 'smooth' });

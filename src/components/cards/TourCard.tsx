@@ -16,7 +16,7 @@ const segmentLabel: Record<Tour['segment'], string> = {
 
 export function TourCard({ tour }: { tour: Tour }) {
   return (
-    <article className="group flex h-full flex-col overflow-hidden rounded-2xl bg-ivory-100 shadow-card ring-1 ring-midnight/5 transition-all duration-500 ease-canaan hover:-translate-y-1 hover:shadow-card-hover">
+    <article className="group flex h-full flex-col overflow-hidden rounded-2xl bg-ivory-100 shadow-card ring-1 ring-mist transition-all duration-500 ease-canaan hover:-translate-y-1 hover:shadow-card-hover">
       <Link href={`/du-lich/${tour.slug}`} className="relative block aspect-[4/3] overflow-hidden">
         <Image
           src={tour.image}

@@ -10,40 +10,43 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // Champagne Ivory Royal — nền kem ấm & be cát, navy trầm, nhấn gold champagne.
         midnight: {
-          DEFAULT: '#0A1E3C',
-          950: '#06152C',
-          900: '#0A1E3C',
-          800: '#122A4F',
-          700: '#1B3862',
+          DEFAULT: '#364A63', // Muted Navy — tiêu đề, section tối, nút phụ
+          950: '#293A4F', // navy trầm — footer
+          900: '#364A63',
+          800: '#45596F', // navy nhạt — card/ring trên nền tối
+          700: '#55697E',
         },
         royal: {
-          DEFAULT: '#1E52B0',
-          600: '#1E52B0',
-          500: '#2C63C6',
-          400: '#4E82DC',
+          // Màu tương tác (link, chip active, focus) — navy trầm.
+          DEFAULT: '#364A63',
+          600: '#293A4F',
+          500: '#45596F',
+          400: '#5A6E82',
         },
         champagne: {
-          DEFAULT: '#C6A15B',
-          600: '#B08C46',
-          500: '#C6A15B',
-          400: '#D6B87C',
-          200: '#EBDCBD',
+          DEFAULT: '#B88A3B', // Champagne Gold — điểm nhấn, nút chính, giá
+          600: '#9C7430', // gold đậm — chữ gold trên nền sáng
+          500: '#B88A3B',
+          400: '#D3B16A', // Light Gold — chữ gold trên nền tối, footer title
+          200: '#EAD9B4', // gold pale — nền nhãn, viền
         },
         ivory: {
-          DEFAULT: '#FAF7F0',
-          100: '#FFFFFF',
-          200: '#F3EEE3',
+          DEFAULT: '#F7EEDC', // nền chính kem ấm
+          100: '#FFF9EF', // card / surface — kem rất sáng (không trắng lạnh)
+          200: '#EEDDC1', // nền phụ — be cát tạo chiều sâu
         },
         mist: {
-          DEFAULT: '#E3E9F1',
-          200: '#EEF2F7',
-          400: '#CBD6E4',
+          // Viền & bề mặt phụ — sắc vàng be ấm.
+          DEFAULT: '#DCC8A5', // border
+          200: '#EEDDC1', // surface phụ / hover — be cát
+          400: '#CBB588', // border đậm hơn
         },
         ink: {
-          DEFAULT: '#16233B',
-          muted: '#4B5A72',
-          soft: '#7A879C',
+          DEFAULT: '#2E2923', // chữ chính — nâu đen ấm
+          muted: '#756B5E', // chữ phụ
+          soft: '#9A8E7B', // chú thích
         },
       },
       fontFamily: {
@@ -62,9 +65,10 @@ const config: Config = {
         shell: '82rem',
       },
       boxShadow: {
-        card: '0 1px 2px rgba(10, 30, 60, 0.04), 0 12px 32px -12px rgba(10, 30, 60, 0.18)',
-        'card-hover': '0 2px 4px rgba(10, 30, 60, 0.06), 0 24px 48px -16px rgba(10, 30, 60, 0.28)',
-        console: '0 24px 70px -24px rgba(6, 21, 44, 0.55)',
+        // Shadow mềm, ngả navy trầm ấm — cao cấp, không dày đặc.
+        card: '0 1px 2px rgba(54, 74, 99, 0.05), 0 12px 36px rgba(54, 74, 99, 0.09)',
+        'card-hover': '0 2px 6px rgba(54, 74, 99, 0.07), 0 22px 48px -14px rgba(54, 74, 99, 0.17)',
+        console: '0 24px 60px -22px rgba(54, 74, 99, 0.24)',
       },
       borderRadius: {
         xl: '1rem',

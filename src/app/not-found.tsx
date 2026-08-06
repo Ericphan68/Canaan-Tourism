@@ -15,7 +15,7 @@ export default function NotFound() {
   return (
     <section className="relative isolate flex min-h-[70vh] items-center overflow-hidden bg-midnight text-white">
       <svg className="pointer-events-none absolute inset-x-0 top-1/2 -z-0 h-24 w-full opacity-50" viewBox="0 0 1200 100" fill="none" preserveAspectRatio="none" aria-hidden>
-        <path d="M-20 60 C 320 20, 720 20, 1220 50" stroke="#C6A15B" strokeWidth="1.5" strokeDasharray="2 7" />
+        <path d="M-20 60 C 320 20, 720 20, 1220 50" stroke="#B88A3B" strokeWidth="1.5" strokeDasharray="2 7" />
       </svg>
 
       <div className="shell py-20 text-center">
